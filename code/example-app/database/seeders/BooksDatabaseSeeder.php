@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Book;
+
 class BooksDatabaseSeeder
 {
     /**
@@ -11,13 +13,14 @@ class BooksDatabaseSeeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+         Book::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        // TODO
+         Book::factory()->create([
+             'title' => 'A Christmas Carol',
+             'author' => 'Charles Dickens',
+             'genre' => 'classic',
+             'number of pages' => 82,
+             'year published' => 1843,
+         ]);
     }
 }
