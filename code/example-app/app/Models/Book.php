@@ -2,8 +2,13 @@
 
 namespace App\Models;
 
-class Book
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Book extends Model
 {
+    use hasFactory;
+
     private string $title;
 
     private string $author;
